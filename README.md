@@ -1,41 +1,41 @@
-# reservations
+# Reservations
 
 Design project for a resource booking system
 
-##1. Base Resource Class
+## 1. Base Resource Class
 
 Purpose: Provide a shared foundation (e.g., id, name, capacity, location, etc.) and generic methods (like checking basic availability).
 
 This structure allows you to store generic resource properties (e.g., id, name, capacity) while giving each specialized resource type the flexibility to add its own attributes and methods.
 
-###Notes on the attributes Property
+### Notes on the attributes Property
 	•	The attributes object is a simple way to store custom fields that may vary by resource type.
 	•	We can add new properties at runtime with setAttribute().
 	•	This approach keeps the base Resource class from becoming cluttered while still allowing for extension or specialized needs.
 
-##2. Specialized Resource Classes
+## 2. Specialized Resource Classes
 
 Below are some examples of how you might extend the base Resource class for different use cases. Each specialized class overrides or adds attributes and methods that are unique to that resource type.
 
-###2.1. Restaurant Table Resource
+### 2.1. Restaurant Table Resource
 Extends the base resource class to include attributes for:
    •	Table Shape
    •	Allows High Chair
    •	start and endtime 
 
-###2.2. Meeting Room Resource
+### 2.2. Meeting Room Resource
 Extends the base resource class to include attributes for:
    •	Has Projector
    •	Has Whiteboard
    •	Max Occupancy
 \   •	start and endtime 
 
-###2.3. Rental Equipment Resource
+### 2.3. Rental Equipment Resource
     •	Serial Number
     •	Brand
     •	Usage
 
-##Usage Example
+## Usage Example
 
 ```
 import { TableResource } from './tableResource.js';
